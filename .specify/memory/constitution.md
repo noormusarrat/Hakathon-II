@@ -1,55 +1,71 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: [CONSTITUTION_VERSION] → 1.0.0
+- List of modified principles:
+  - [PRINCIPLE_1_NAME] → I. Spec-Driven Development
+  - [PRINCIPLE_2_NAME] → II. Simplicity
+  - [PRINCIPLE_3_NAME] → III. In-Memory Storage
+  - [PRINCIPLE_4_NAME] → IV. Code Quality
+  - [PRINCIPLE_5_NAME] → V. Technical Stack & Standards
+  - [PRINCIPLE_6_NAME] → VI. Architecture & Validation
+- Added sections:
+  - Constraints
+  - Success Criteria
+- Removed sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md (✅ updated conceptually via constitution)
+  - .specify/templates/spec-template.md (✅ updated conceptually via constitution)
+  - .specify/templates/tasks-template.md (✅ updated conceptually via constitution)
+- Follow-up TODOs:
+  - RATIFICATION_DATE set to today (2026-01-01) as this is Phase 1 adoption.
+-->
+
+# In-Memory Python Todo Console Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+Implementation MUST strictly follow the specifications defined in the `specs/` folder. No code should be written
+without a corresponding specification and plan that has been reviewed.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Simplicity
+Focus on a clean, functional Command Line Interface (CLI) without unnecessary complexity. The first solution
+to a problem MUST be the simplest one that satisfies the requirements.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. In-Memory Storage
+For Phase 1, the application MUST NOT use external databases or files for persistence. Data MUST persist
+only while the application is running.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Code Quality
+Code MUST be PEP 8 compliant, modular, and easy to extend for future phases. Every function SHOULD have
+docstrings explaining its purpose.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Technical Stack & Standards
+- Language: Python 3.13+
+- Dependency Management: `uv`
+- Development Framework: Spec-Kit Plus
 
-### [PRINCIPLE_6_NAME]
+### VI. Architecture & Validation
+There MUST be a clear separation between business logic (CRUD operations) and the CLI interface.
+All user inputs, especially IDs, MUST be validated to prevent application crashes.
 
+## Constraints
 
-[PRINCIPLE__DESCRIPTION]
+- Scope: Only implement Phase 1 features (In-Memory Python App). Do NOT add Next.js or FastAPI yet.
+- Environment: Must run seamlessly within a WSL/Ubuntu environment.
+- Tooling: Use `uv` for all package management and running scripts.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Success Criteria
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Application starts and displays a menu (Add, List, Complete, Delete, Exit).
+- User can add a task and see it immediately in the list.
+- "Complete" and "Delete" actions work correctly using Task IDs.
+- Zero errors when running the final Python script.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+- The Constitution supersedes all other project practices.
+- Amendments MUST be documented with a version bump and approved by the project architect.
+- All code reviews MUST verify compliance with these principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-01 | **Last Amended**: 2026-01-01

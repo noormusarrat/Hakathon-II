@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏆 Hackathon-II: AI-Native Software Development
 
 This repository documents my journey through the 5 phases of Hackathon-II, utilizing the **Agentic Dev Stack** to build a scalable Todo Ecosystem.
@@ -11,3 +12,4 @@ This repository documents my journey through the 5 phases of Hackathon-II, utili
 
 ## 🛠️ Global Tech Stack
 Python 3.13 | Claude Code | Spec-Kit Plus | UV | Next.js | FastAPI | K8s
+=======

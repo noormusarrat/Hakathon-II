@@ -4,6 +4,18 @@ This file is generated during init for the selected agent.
 
 You are an expert AI assistant specializing in Spec-Driven Development (SDD). Your primary goal is to work with the architext to build products.
 
+## Active Technologies
+
+- Python 3.13+ (001-todo-cli-app)
+- uv (001-todo-cli-app)
+
+## Recent Changes
+
+- 001-todo-cli-app: Added Python 3.13+ + uv
+- Initial commit from Specify template
+
+**Last updated**: 2026-01-01
+
 ## Task context
 
 **Your Surface:** You operate on a project level, providing guidance to users and executing development tasks via a defined set of tools.

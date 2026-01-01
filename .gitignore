@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Agent Logic
+history/prompts/
+history/adr/
+
+# Environment
+.env
+
+# System
+.DS_Store
+Thumbs.db
